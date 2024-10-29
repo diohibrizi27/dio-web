@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DioH Protolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <!-- Ganti tag <i> dengan tag <img> -->
+                    <img src="WhatsApp Image 2024-10-28 at 5.04.52 AM.jpeg" alt="Company Logo" class="company-logo">
+                    <div class="logo-text">DIO RISKA HIBRIZI</div>
+                </div>                
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#performance">Performance</a></li>
+                        <li><a href="#skil">Skill</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="student-776190_640.webp" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">AI Engineer</span></h5>
+                    <h1>DIO</h1>
+                    <p> Hi! My name is DIO RISKA HIBRIZI , but you can call me dio.
+                        I'm a junior programmer currently studying at UNIVERSITAS MUHAMMADIYAH SUMATERA UTARA. My core skills revolve around Python, Data Science, and Machine Learning.
+                        I am driven by a mission to build an Artifical Intelligence.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="#" class="btn">Contact</a>
+                    </div>
+                     
+                    <div class="social">
+                        <a href="https://mail.google.com/mail/?view=cm&to=hibrizydio@gmail.com"><i class="fa-solid fa-envelope"></i></a> <!-- Tambahkan ini -->
+                        <a href="https://wa.me/+6283875655432" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/diohirizy_27/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+
+    <!-- Section Proyek -->
+    <section class="projects" id="performance">
+        <div class="wrapper">
+            <h2>Performance</h2>
+            <div class="project-container">
+                <div class="project-item">
+                    <img src="Screenshot_20241025_182203~3.jpg" >
+                </div>
+    </section>
+    
+    <!-- Modal untuk menampilkan gambar penuh -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="img-fluid" alt="Project Image">
+                    <p id="modalDescription" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    /** creating button click show hide navbar **/
+    var togglebtn=document.querySelector(".togglebtn");
+    var nav=document.querySelector(".navlinks");
+    var links=document.querySelector(".navlinks li");
+
+    togglebtn.addEventListener("click", function(){
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+    })
+
+    var typed=new Typed(".input",{
+        strings:["Data Engineer","AI Engineer","Backend Developer"],
+        typedSpeed:70,
+        backSpeed:80,
+        loop:true
+    })
+    </script>
+    <script>
+    function setModalImage(src, title, description) {
+        document.getElementById('modalImage').src = src;
+        document.getElementById('projectModalLabel').innerText = title;
+        document.getElementById('modalDescription').innerText = description;
+    }
+    </script>
+
+    <!-- Section My Mission -->
+    <section class="mission" id="skil">
+        <div class="wrapper">
+            <h2>education</h2>
+            <div class="mission-content">
+                <div class="mission-logo">
+                    <img src="pr besar.jpeg" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="mission-description">
+                    <p>PERNAH BELAJAR DI SMP=MUHAMMADIYAH-16</p>
+                    <P>TAMATAN SMK=TAMAN SISWA</P>
+                    <p>SEDANG BELAJAR DI KULIAH=UNIVERSITAS MUHAMMADIYAH SUMATERA UTARA
+                        (UMSU)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     
+</body>
+</html>
